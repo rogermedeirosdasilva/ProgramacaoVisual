@@ -57,9 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InstanciaDB.cs" />
     <Compile Include="Maps\AlunoMap.cs" />
     <Compile Include="Maps\AlunoNotaMap.cs" />
     <Compile Include="Maps\DisciplinaMap.cs" />
+    <Compile Include="Negocio\AlunoNegocio.cs" />
     <Compile Include="Repositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

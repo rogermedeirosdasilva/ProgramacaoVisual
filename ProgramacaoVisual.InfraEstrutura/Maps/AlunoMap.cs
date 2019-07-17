@@ -16,7 +16,7 @@
                 .IsRequired();
             Property(p => p.Nome)
                 .HasColumnName("nome")
-                .HasMaxLength(20)
+                .HasMaxLength(60)
                 .IsRequired();
             Property(p => p.Celular)
                 .HasColumnName("celular")

@@ -11,11 +11,21 @@ using System.Windows.Forms;
 
 namespace ProgramacaoVisual
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
-        public Form1()
+        public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void btnAlunos_Click(object sender, EventArgs e)
+        {
+            AbrirFormNoPanel(new FrmConsAluno());
+        }
+
+        private void AbrirFormNoPanel(Form filho)
+        {
+            filho.ShowDialog();
         }
     }
 }
