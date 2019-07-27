@@ -72,5 +72,15 @@ namespace ProgramacaoVisual
                 }
             }
         }
+
+        private void lstAlunos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstAlunos_Resize(object sender, EventArgs e)
+        {
+            nome.Width = (lstAlunos.Width - 440);
+        }
     }
 }

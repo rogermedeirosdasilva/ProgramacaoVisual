@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.lstAlunos = new System.Windows.Forms.ListView();
             this.matricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Nascimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.celular = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Nascimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +53,21 @@
             this.panel1.Size = new System.Drawing.Size(960, 86);
             this.panel1.TabIndex = 0;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovo.Location = new System.Drawing.Point(855, 38);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(93, 23);
+            this.btnNovo.TabIndex = 6;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // btnPesquisa
             // 
-            this.btnPesquisa.Location = new System.Drawing.Point(396, 41);
+            this.btnPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisa.Location = new System.Drawing.Point(747, 38);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(93, 23);
             this.btnPesquisa.TabIndex = 5;
@@ -65,9 +77,11 @@
             // 
             // txtPesquisa
             // 
+            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPesquisa.Location = new System.Drawing.Point(21, 41);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(351, 20);
+            this.txtPesquisa.Size = new System.Drawing.Size(720, 20);
             this.txtPesquisa.TabIndex = 4;
             // 
             // lblPesquisa
@@ -78,16 +92,6 @@
             this.lblPesquisa.Size = new System.Drawing.Size(53, 13);
             this.lblPesquisa.TabIndex = 3;
             this.lblPesquisa.Text = "Pesquisar";
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(525, 41);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(93, 23);
-            this.btnNovo.TabIndex = 6;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // lstAlunos
             // 
@@ -108,7 +112,9 @@
             this.lstAlunos.TabIndex = 1;
             this.lstAlunos.UseCompatibleStateImageBehavior = false;
             this.lstAlunos.View = System.Windows.Forms.View.Details;
+            this.lstAlunos.SelectedIndexChanged += new System.EventHandler(this.lstAlunos_SelectedIndexChanged);
             this.lstAlunos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstAlunos_MouseDoubleClick);
+            this.lstAlunos.Resize += new System.EventHandler(this.lstAlunos_Resize);
             // 
             // matricula
             // 
@@ -118,19 +124,19 @@
             // nome
             // 
             this.nome.Text = "Nome";
-            this.nome.Width = 400;
-            // 
-            // Nascimento
-            // 
-            this.Nascimento.DisplayIndex = 2;
-            this.Nascimento.Text = "Nascimento";
-            this.Nascimento.Width = 100;
+            this.nome.Width = 531;
             // 
             // celular
             // 
             this.celular.DisplayIndex = 3;
             this.celular.Text = "Celular";
             this.celular.Width = 120;
+            // 
+            // Nascimento
+            // 
+            this.Nascimento.DisplayIndex = 2;
+            this.Nascimento.Text = "Nascimento";
+            this.Nascimento.Width = 100;
             // 
             // FrmConsAluno
             // 
@@ -140,6 +146,7 @@
             this.Controls.Add(this.lstAlunos);
             this.Controls.Add(this.panel1);
             this.Name = "FrmConsAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsAluno";
             this.Load += new System.EventHandler(this.FrmConsAluno_Load);
             this.panel1.ResumeLayout(false);
